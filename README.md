@@ -29,7 +29,7 @@ The compiled binary will be located in `./target/release/hashit`. You can move t
 To run the tests for `hashit`, navigate to the project directory and use the following command:
 
 ```bash
-cargo build --release
+cargo test
 ```
 
 ## Build using Docker
@@ -38,6 +38,15 @@ To build the project using Docker invoke the following command
 
 ```bash
 docker build . -t hashit:1
+```
+
+## Example
+
+```text
+cat abc.txt | hashit --verbose
+a 80084bf2fba02475726feb2cab2d8215eab14bc6bdd8bfb2c8151257032ecd8b
+b b039179a8a4ce2c252aa6f2f25798251c19b75fc1508d9d511a191e0487d64a7
+c 263ab762270d3b73d3e2cddf9acc893bb6bd41110347e5d5e4bd1d3c128ea90a
 ```
 
 ## Contributing
